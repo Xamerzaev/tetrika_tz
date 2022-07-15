@@ -1,13 +1,13 @@
-import array as arr 
+from typing import Optional
 
-#вводим двоичный код (Целое число)
-massiv = int(float(input('Введите двоичный код')))
+#массив
+array = "111110000"
 
-#разбиваем целое число на цифры
-x = [int(a) for a in str(massiv)]
+def task(array: str) -> Optional[int]:
+    for i in range(len(array)):
+        if array[i] == "0":
+            return i
+    return None
 
-#создаем массив из цифр
-numbers = arr.array('i',x)
-
-#выводим индекс первого нуля
-print(numbers.index(0))
+assert task(array) == len(array)-4
+print(task(array))

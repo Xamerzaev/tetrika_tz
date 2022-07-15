@@ -21,7 +21,6 @@ def appearance(intervals):
     for i in range(1, len(intervals_list), 2):
         delta = intervals_list[i] - intervals_list[i-1]
         time += delta
-#    print(time)
     return time
 
 
@@ -54,4 +53,3 @@ for i, test in enumerate(tests):
     test_answer = appearance(test['data'])
     print(test_answer)
     assert test_answer == test['answer'], f'Error on test case {i}, got {test_answer}, expected {test["answer"]}'
-    
