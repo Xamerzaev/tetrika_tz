@@ -1,7 +1,7 @@
 from typing import Optional
 
-#массив
-array = "111110000"
+array = "111110000"  # массив
+
 
 def task(array: str) -> Optional[int]:
     for i in range(len(array)):
@@ -9,5 +9,7 @@ def task(array: str) -> Optional[int]:
             return i
     return None
 
+
 assert task(array) == len(array)-4
+
 print(task(array))
